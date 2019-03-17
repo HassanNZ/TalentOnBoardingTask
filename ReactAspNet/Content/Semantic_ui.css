@@ -1,7 +1,7 @@
 ﻿/*.ui.page.modals.dimmer.transition.visible.active {
 display:flex !important;
 }*/
-.ui.modal:not(.compact) {
+/*.ui.modal:not(.compact) {
 width: calc(45% - 50px) !important;
 margin-left: 250px !important;
 height: calc(55% - 50px) !important;
@@ -12,4 +12,10 @@ padding: 1px 1px 1px 1px;
 #action1{
     background-color:aquamarine;
     height: calc(70% - 50px) !important;
+}*/
+.ui.modal:not(.compact) {
+width: calc(45% - 50px) !important;
+height: calc(55% - 50px) !important;
+padding: 1px 1px 1px 1px;
+
 }

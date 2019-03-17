@@ -20,9 +20,9 @@ namespace ReactAspNet
             this.ProductSolds = new HashSet<ProductSold>();
         }
     
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Address { get; set; }
+        public int StoreId { get; set; }
+        public string StoreName { get; set; }
+        public string StoreAddress { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductSold> ProductSolds { get; set; }

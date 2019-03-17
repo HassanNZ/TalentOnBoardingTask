@@ -1,24 +1,61 @@
 ﻿import React from 'react';
-import { render } from 'react-dom';
+import { render} from 'react-dom';
 import CustomersList from './CustomersList';
-import CustomerModal from './CustomerModal';
-import { Container } from 'semantic-ui-react';
-import Login from './Login';
+import { Container,Menu } from 'semantic-ui-react';
+import Stores from './StoreList';
+import ProductsList from './ProductsList';
+import SoldProductsList from './SoldProsuctsList';
+import Test from './test';
 
 class App extends React.Component {
+  
+    constructor(props){
+        super(props);
+        this.state = {ID:"app"}
+    }
+
+    componentDidMount() {
+        this.GetID();
+    }
+    GetID(){
+        var getID = document.getElementById('ID').innerHTML ;
+        this.setState({ID:getID});
+        
+
+    }
+
     render() {
+       
         return (
             <div>
-             <CustomersList/>
-            
-         
+               
+             {this.state.ID == "Store" && <Stores />}
+        {this.state.ID == "Customer" && <CustomersList />}
+    {this.state.ID == "Product" && <ProductsList />}
+    {this.state.ID == "Sold Product" && <SoldProductsList />}
+        
+        
+  
           
-            </div>
+           
+          
+          
+           
+          
+
+            
+        
+          
+          </div>
             
         );
-            }
+    }
 }
 
 
 render(<App />, document.getElementById('app'));
+
+
+
+
 
